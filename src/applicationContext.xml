@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd">  
+
+
+	<bean id="productDao" class="com.itheima.spring.demo3.ProductDaoImpl">
+	</bean>
+	
+	<bean id="myAspect" class="com.itheima.spring.demo3.MyAspectXML2" />
+	 
+	 
+	 <!-- 在配置文件中开启注解的AOP开发 -->
+	 <aop:aspectj-autoproxy />
+</beans>
